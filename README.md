@@ -11,5 +11,11 @@ This is a simple Rock-Paper-Scissors game implemented using HTML, CSS, and JavaS
 - Rules: The game also provides a Rules button, which displays the rules of the game when clicked.
 - Hurray Page: When the player wins the game, a Hurray page is displayed, congratulating the player and giving them the option to play again.
 
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
 ## Web
 https://rock-paper-scissors-game-teal-seven.vercel.app/
