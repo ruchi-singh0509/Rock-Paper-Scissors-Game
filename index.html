@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:wght@500&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- GAME SCREEN -->
+    <div class="Game_page">
+        <header>
+            <div class="ScoreBoard">
+                <h1>
+                    ROCK <br />
+                    PAPER <br />
+                    SCISSORS
+                </h1>
+                <div class="score_display">
+                    <div class="score">
+                        <div>COMPUTER</div>
+                        <div>SCORE</div>
+                        <div class="computer_score">0</div>
+                    </div>
+                    <div class="score">
+                        <div>YOUR</div>
+                        <div>SCORE</div>
+                        <div class="user_score">0</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- PLAY ZONE  -->
+        <main>
+            <div class="game_zone">
+                <div class="top_content">
+                    <div class="icon" id="rock">
+                        <img src="icons&images/icons8-fist-67 1.png" alt="rock_icon">
+                    </div>
+                    <div class="icon" id="scissors">
+                        <img src="icons&images/17911 1.png" alt="scissors_icon">
+                    </div>
+                    <img src="icons&images/Line 1.png" alt="line" id="line1">
+                    <img src="icons&images/Line 2.png" alt="line" id="line2">
+                    <img src="icons&images/Line 3.png" alt="line" id="line3">
+                </div>
+
+                <div class="bottom_content">
+                    <div class="icon" id="paper">
+                        <img src="icons&images/icons8-hand-64 1.png" alt="paper_icon">
+                    </div>
+                </div>
+            </div>
+            <!-- CONTEST & RESULT ZONE -->
+            <div class="result_zone">
+                <div class="user_section">
+                    <div class="user_picked_text">YOU PICKED</div>
+                    <div class="user_options">
+                        <div class="option" id="user_stone">
+                            <img src="icons&images/icons8-fist-67 1.png" alt="rock_icon">
+                        </div>
+                        <div class="option" id="user_paper">
+                            <img src="icons&images/icons8-hand-64 1.png" alt="paper_icon">
+                        </div>
+                        <div class="option" id="user_scissor">
+                            <img src="icons&images/17911 1.png" alt="scissors_icon">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Result">
+                    <div class="message" id="won">YOU WON</div>
+                    <div class="message" id="lost">YOU LOST</div>
+                    <div class="message" id="tie">TIE UP</div>
+                    <div class="sub_message">AGAINST PC</div>
+                    <button class="play_again_button">PLAY AGAIN</button>
+                    <button class="replay_button">REPLAY</button>
+                </div>
+
+                <div class="pc_section">
+                    <div class="pc_picked_text">PC PICKED</div>
+                    <div class="pc_options">
+                        <div class="option" id="pc_stone">
+                            <img src="icons&images/icons8-fist-67 1.png" alt="rock_icon">
+                        </div>
+                        <div class="option" id="pc_paper">
+                            <img src="icons&images/icons8-hand-64 1.png" alt="paper_icon">
+                        </div>
+                        <div class="option" id="pc_scissor">
+                            <img src="icons&images/17911 1.png" alt="scissors_icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <!-- WINNING SCREEN -->
+    <div class="Hurray_page">
+        <div class="winning_trophy">
+            <img src="icons&images/victory_cup.png" alt="victory_cup">
+            <img src="icons&images/winning_stars.png" alt="stars" class="stars">
+        </div>
+        <div class="hurray_message">HURRAY!!</div>
+        <div class="winning_text">YOU WON THE GAME</div>
+        <button class="new_game_button">PLAY AGAIN</button>
+    </div>
+
+
+    <!-- RULES OF GAME & CROSS BUTTON TO CLOSE THE RULES SCREEN -->
+    <div class="cross">
+        <img src="icons&images/X.png" alt="cross_image">
+    </div>
+
+    <div class="RULES">
+        <div class="heading">GAME RULES</div>
+        <ul>
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li>Agree ahead of time whether you’ll count off “rock, paper, scissors,
+                shoot” or just “rock, paper, scissors.”</li>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+            <li>If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+    </div>
+
+    <footer>
+        <button class="rules_button">RULES</button>
+        <button class="next_button">NEXT</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

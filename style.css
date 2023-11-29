@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+/* GAME SCREEN STYLING */
+.Game_page {
+    background-color: #8CC461;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    position: relative;
+}
+
+/* SCOREBOARD STYLING */
+header {
+    display: flex;
+    justify-content: center;
+    width: full;
+    margin-top: 4%;
+}
+
+.ScoreBoard {
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    height: 20%;
+    padding: 10px 10px;
+    border-radius: 1rem;
+    border: 2px solid white;
+}
+
+h1 {
+    letter-spacing: 4px;
+}
+
+.score_display {
+    display: flex;
+    gap: 25px;
+    width: 35%;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+    background-color: white;
+    color: #656565;
+    border-radius: 0.5rem;
+    width: 50%;
+    padding: 5px;
+    letter-spacing: 1.7px;
+}
+
+.computer_score,
+.user_score {
+    justify-self: flex-end;
+    font-weight: 600;
+    font-size: 55px;
+    color: #252525;
+}
+
+
+/* GAME ZONE STYLING */
+main {
+    display: flex;
+    justify-content: center;
+    height: 60%;
+    width: full;
+    margin-top: 5%;
+}
+
+.game_zone {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: full;
+    width: 50%;
+    gap: 20px;
+}
+
+.top_content {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 40%;
+    z-index: 2;
+}
+
+.bottom_content {
+    display: flex;
+    position: relative;
+    height: 40%;
+}
+
+#line1 {
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    top: 25%;
+    z-index: -1;
+}
+
+#line2 {
+    position: absolute;
+    width: 13%;
+    left: 53%;
+    top: 35%;
+    z-index: -1;
+}
+
+#line3 {
+    position: absolute;
+    width: 13%;
+    left: 34%;
+    top: 35%;
+    z-index: -1;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 50%;
+    z-index: 2;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#rock {
+    background-image: url("icons&images/circle1.png");
+
+}
+
+#paper {
+    background-image: url("icons&images/circle3.png");
+
+}
+
+#scissors {
+    background-image: url("icons&images/circle2.png");
+}
+
+
+/* RESULT ZONE*/
+.result_zone {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 90%;
+    width: 50%;
+    padding: 0 5px;
+    gap: 20px;
+    display: none;
+
+
+}
+
+.user_section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    height: 70%;
+    width: 32%;
+}
+
+.user_picked_text,
+.pc_picked_text {
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 1;
+    margin-bottom: 2%;
+
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    border: none;
+    background-repeat: no-repeat;
+}
+
+#user_stone,
+#pc_stone {
+    background-image: url("icons&images/circle1.png");
+    display: none;
+
+}
+
+#user_paper,
+#pc_paper {
+    background-image: url("icons&images/circle3.png");
+    display: none;
+}
+
+#user_scissor,
+#pc_scissor {
+    background-image: url("icons&images/circle2.png");
+    display: none;
+}
+
+.Result {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+
+}
+
+.message {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.sub_message {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#lost,
+#tie,
+.replay_button {
+    display: none;
+}
+
+.play_again_button,
+.replay_button {
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 5px;
+    height: 2rem;
+    color: #656565;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    width: 70%;
+    cursor: pointer;
+}
+
+.pc_section {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+}
+
+.shadow {
+    border: none;
+    box-shadow:
+        0 0 0 10px #1da82b inset,
+        0 0 0 10px #1da82b,
+        0 0 0 25px #1da82b90,
+        0 0 0 40px #2E9A2563;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+/* RULES BOX STYLING */
+.RULES {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    background-color: #004429;
+    color: white;
+    overflow-y: hidden;
+    max-height: 60%;
+    width: 21%;
+    border-radius: 2rem;
+    display: none;
+    padding: 0.5rem;
+    border: solid white 8px;
+    bottom: 6rem;
+    right: 2rem;
+}
+
+.RULES ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.RULES li {
+    position: relative;
+    font-size: 15px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.RULES li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ffd600;
+    margin-right: 10px;
+}
+
+.heading {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+
+}
+
+.cross {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("icons&images/Ellipse\ 6.png");
+    width: 60px;
+    height: 60px;
+    bottom: 70%;
+    right: 2%;
+    z-index: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+/* HURRAY PAGE STYLING */
+.Hurray_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    background: #8CC461;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.winning_trophy {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    padding-bottom: 2rem;
+    height: 50%;
+    width: 70%;
+}
+
+.stars {
+    position: absolute;
+}
+
+.hurray_message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 5rem;
+    letter-spacing: 9px;
+    height: 10%
+}
+
+.winning_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    height: 10%
+}
+
+.new_game_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 5px;
+    height: 2.5rem;
+    color: #656565;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    width: 12rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* FOOTER BUTTONS STYLING */
+footer {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+}
+
+.rules_button, .next_button {
+    border: 2px solid white;
+    background: transparent;
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.next_button{
+    display: none;
+}
